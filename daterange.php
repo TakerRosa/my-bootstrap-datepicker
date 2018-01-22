@@ -1,11 +1,5 @@
 <?php
 require_once 'inc/main.js.inc.php';
-
-	$Urlary=array(
-		'daterange'
-		,'beforeshowday'
-	);
-
 ?>
 
 
@@ -14,38 +8,25 @@ require_once 'inc/main.js.inc.php';
 <head>
 
 <?php $MAIN_JS_INCLUDE->RUN('main');?>
-
+<?php $MAIN_JS_INCLUDE->RUN('bootstrap_datepicker');?>
 
 
 
 
 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Index</title>
+<title>daterange</title>
 
 </head>
 <body>
-	<table class="table table-striped">
-    	<thead>
-      		<tr>
-        		<th>Name</th>
-      		</tr>
-    	</thead>
+	<div class="input-group input-daterange">
+		<input id="startDate1" name="startDate1" type="text" class="form-control" readonly="readonly"> 
 
-  		<tbody>
-<?php
-	foreach ($Urlary as $value ) {
-?>
-  			<tr>
-  				<td><a href="<?=$value?>.php"><?=$value?></a></td>
-  			</tr>
+		<span class="input-group-addon">to</span> 
 
-<?php
-	}
-?>
+		<input id="endDate1" name="endDate1" type="text" class="form-control" readonly="readonly">
 
-  		</tbody>
-	</table>
+	</div>
 
 	
 	<script type="text/javascript">
